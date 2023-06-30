@@ -14,6 +14,7 @@
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
+  --h3-font-size:  1rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
   /*===== Margenes =====*/
@@ -72,17 +73,83 @@ img {
 }
 
 /*===== CLASS CSS ===== */
+.pb-4 {
+  padding-bottom: var(--mb-4);
+}
+
+.padding-2 {
+  padding: var(--mb-2);
+}
+
+.padding-4 {
+  padding: var(--mb-4);
+}
+
+.margin-2 {
+  padding: var(--mb-2);
+}
+
+.margin-4 {
+  padding: var(--mb-4);
+}
+
+.mh-4 {
+  margin-left: var(--mb-4);
+  margin-right: var(--mb-4);
+}
+
 .projects_name {
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 10px;
+  padding-top: var(--mb-2);
+  padding-bottom: var(--mb-2)
+}
+
+.about_text {
+  text-align: justify;
 }
 
 .projects_desciption {
   text-align: justify;
-  padding-bottom: 25px;
+  padding-bottom: var(--mb-4);
 }
 
+#imageContainer img {
+  display: none;
+}
+
+#imageContainer img.active {
+  display: block;
+}
+
+.video-player-large {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.video-player-long {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.center_container {
+  text-align: center;
+  align-items: center;
+}
+
+hr {
+  border: none;
+  height: 0.18rem;
+  background: var(--second-color);
+  width: 30%;
+  margin: auto;
+}
+
+.subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--second-color);
+}
 
 .section-title {
   position: relative;
@@ -239,6 +306,7 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
+  padding-left: var(--mb-4);
   width: 260px;
 }
 
@@ -269,6 +337,7 @@ img {
 .about__container {
   row-gap: 2rem;
   text-align: center;
+  align-items: center;
 }
 
 .about__subtitle {
@@ -331,19 +400,19 @@ img {
   z-index: var(--z-back);
 }
 
-.skills__html {
-  width: 95%;
+.skills__mngnt {
+  width: 40%;
 }
 
-.skills__css {
-  width: 85%;
+.skills__flutter {
+  width: 25%;
+}
+
+.skills__ps {
+  width: 75%;
 }
 
 .skills__js {
-  width: 65%;
-}
-
-.skills__ux {
   width: 85%;
 }
 
@@ -427,6 +496,10 @@ img {
   .home__img {
     width: 200px;
   }
+  
+  .video-player-long {
+    width: 70%;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -480,11 +553,16 @@ img {
     padding-bottom: 3rem;
   }
   .section-title {
-    margin-bottom: var(--mb-6);
+    margin-bottom: var(--mb-2);
   }
   .section-title::after {
     width: 80px;
-    top: 3rem;
+    top: 3.5rem;
+  }
+  .video-player-long {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
@@ -538,5 +616,8 @@ img {
   }
   .home__img {
     width: 450px;
+  }
+  .video-player-long {
+    width: 30%;
   }
 }

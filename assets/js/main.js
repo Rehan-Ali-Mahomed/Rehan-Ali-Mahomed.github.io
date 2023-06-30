@@ -59,3 +59,14 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 function toggleSection(elementId) {
     document.getElementById(elementId).classList.toggle("section-description");
 }
+
+var images = Array.from(document.querySelectorAll('#imageContainer img'));
+var currentIndex = 0;
+
+function changeImage(direction) {
+    images[currentIndex].classList.remove('active');
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
+    images[currentIndex].classList.add('active');
+}
