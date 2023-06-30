@@ -1,205 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Marlon</a>
-                </div>
+    <!-- =====LOAD HEADER AND FOOTER===== -->
+    <script>
+        function LoadHeaderAndFooter() {
+            document.getElementById("header").innerHTML = `
+                <header class="l-header">
+                    <nav class="nav bd-grid">
+                        <div>
+                            <a href="#" class="nav__logo">Réhan</a>
+                        </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+                        <div class="nav__menu" id="nav-menu">
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="#home" class="nav__link active">Accueil</a></li>
+                                <li class="nav__item"><a href="#skills" class="nav__link">Compétences</a></li>
+                                <li class="nav__item"><a href="#work" class="nav__link">Mes Projets</a></li>
+                                <li class="nav__item"><a href="#about" class="nav__link">À propos de moi</a></li>
+                                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                            </ul>
+                        </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class='bx bx-menu'></i>
+                        </div>
+                    </nav>
+                </header>
+                `
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Marlon</span><br> Web Designer</h1>
-
-                    <a href="#" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
+            document.getElementById("footer").innerHTML = `
+                <footer class="footer">
+                    <p class="footer__title">Marlon</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                        <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                        <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
                     </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Marlon</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
-                    </div>                                   
-                </div>
-            </section>
+                    <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+                </footer>`
+        }
+    </script>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
+    <title>Portfolio de Réhan</title>
+</head>
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
+<body>
+    <!--===== HEADER =====-->
+    <div id="header"></div>
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Marlon</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+    <main class="l-main">
+        <!--===== ACCUEIL =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Bonjour,<br>Je m'appelle <span class="home__title-color">Réhan</span><br></h1>
+                <h2>Software Engineer</h2>
+                <br>
+                <a href="#" class="button">Contact</a>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-        </footer>
 
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/r%C3%A9han-ali-mahomed/" class="home__social-icon"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Rehan-Ali-Mahomed" class="home__social-icon"><i
+                        class='bx bxl-github'></i></a>
+            </div>
+        </section>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+        <!--===== À PROPOSE DE MOI =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">À propos de moi</h2>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+            <div class="about__container bd-grid">
+                <h2 class="about__subtitle">Réhan ALI MAHOMED</h2>
+                <p class="about__text">
+                    Mordu d'informatique depuis mon plus jeune âge, j'ai aujourd'hui l'opportunité d'allier ma passion
+                    et mon travail.
+                    En effet, l’informatique étant un domaine en constante évolution et omniprésente dans le monde
+                    contemporain,
+                    celle-ci me permet d’assouvir ma soif d'apprendre et de découvrir de nouvelles technologies.
+                    Mon intérêt ne se limite pas à un domaine spécifique, mais s'étend au développement et à
+                    l'automatisation.
+                    Je suis quelqu'un qui s'investit pleinement dans ce qu'il entreprend, utilisant mes compétences pour
+                    résoudre des problèmes complexes et créer des solutions innovantes.
+                </p>
+            </div>
+        </section>
+
+        <!--===== COMPETENCES =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Compétences</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-javascript skills__icon'></i>
+                            <span class="skills__name">JavaScript</span>
+                        </div>
+                        <div class="skills__bar skills__html">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">75%</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-windows skills__icon'></i>
+                            <span class="skills__name">PowerShell</span>
+                        </div>
+                        <div class="skills__bar skills__ps">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-javascript skills__icon'></i>
+                            <span class="skills__name">JAVASCRIPT</span>
+                        </div>
+                        <div class="skills__bar skills__js">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">65%</span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxl-flutter skills__icon'></i>
+                            <span class="skills__name">Flutter</span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">25%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+
+        <!--===== MES PROJETS =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Mes projets</h2>
+
+            <div class="bd-grid">
+                <div class="skills ">
+                    <h2 class="projects_name">Ali Auto</h2>
+                    <p class="projects_desciption">
+                        Dans le cadre de ce projet, j'ai pris en charge la conception et la présentation d'une version
+                        améliorée de
+                        l'outil "Request Management", développé avec PowerApps. Cet outil a été conçu pour optimiser et
+                        simplifier
+                        la gestion des ressources humaines au sein de l'entreprise.
+                        "Request Management" est une application PowerApps qui agit comme une interface entre les
+                        demandes de
+                        recrutement formulées par les commerciaux, les collaborateurs et les managers. L'application
+                        vise à
+                        améliorer la coordination et la communication entre ces différents acteurs, facilitant ainsi une
+                        allocation
+                        efficace des ressources humaines. En regroupant toutes les informations nécessaires sur une
+                        seule
+                        plateforme, "Request Management" simplifie le processus de gestion des ressources humaines et
+                        rend les
+                        réunions "CSB" (Comité de Suivi des Besoins) plus efficaces. Ces réunions sont cruciales pour
+                        discuter des
+                        demandes de recrutement entre les managers et les commerciaux.
+                        Dans ce projet, j'ai assumé le rôle de point de contact unique et de co-chef de projet de
+                        l'équipe de
+                        développement. Cela m'a permis de renforcer mes compétences en gestion de projet et en
+                        leadership.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bd-grid">
+                <div class="skills ">
+                    <h2 class="projects_name">Compteurs partagés avec Supabase et Vue JS</h2>
+                    <p class="projects_desciption">
+                        Dans ce projet, j'ai utilisé Supabase et Vue.js pour développer une application de compteurs
+                        partagés. J'ai
+                        ajouté des fonctionnalités pour permettre aux utilisateurs de partager leurs compteurs avec
+                        d'autres
+                        utilisateurs, de gérer plusieurs compteurs, et de sauvegarder et récupérer la valeur du compteur
+                        depuis
+                        Supabase. Ce projet m'a permis de développer mes compétences en développement full-stack, en
+                        utilisant
+                        Supabase pour le backend et Vue.js pour le frontend.
+                    </p>
+                </div>
+                <video controls class="bd-grid" id="SharedCountersDemoVideo">
+                    <source src="./assets/video/Portfolio - Réhan ALI-MAHOMED - Démo - QuasarDev & Supabase.webm"
+                        type="video/webm">
+                    <p>Votre navigateur ne prend pas en charge les vidéos HTML5.
+                </video>
+            </div>
+
+            <div class="bd-grid">
+                <div class="skills ">
+                    <h2 class="projects_name">Ali Auto</h2>
+                    <p class="projects_desciption">
+                        J'ai développé Ali Auto, une application mobile en Flutter pour une entreprise de location de
+                        véhicules.
+                        L'application assure le suivi des réparations des véhicules à partir d'une checklist et d'un
+                        ratio indiquant
+                        si la voiture est prête ou pas. J'ai également intégré une fonctionnalité de modification et de
+                        synchronisation des modifications effectuées sur tous les appareils avec lesquels l'utilisateur
+                        est
+                        connecté. Enfin, l'application génère un fichier PDF illustrant les réparations terminées ou
+                        non. J'ai
+                        utilisé Firebase comme backend pour cette application, permettant une synchronisation en temps
+                        réel des
+                        données entre différents appareils.
+                    </p>
+                </div>
+            </div>
+            <video controls id="AliAutoDemoVideo" class="bd-grid" style="width: 25%;">
+                <source src="./assets/video/Portfolio - Réhan ALI-MAHOMED - Démo - Ali Auto App.mp4" type="video/webm">
+                <p>Votre navigateur ne prend pas en charge les vidéos HTML5.
+            </video>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" placeholder="Name" class="contact__input">
+                    <input type="mail" placeholder="Email" class="contact__input">
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="button" value="Envoyer" class="contact__button button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <div id="footer"></div>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>

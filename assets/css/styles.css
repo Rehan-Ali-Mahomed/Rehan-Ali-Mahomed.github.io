@@ -72,6 +72,18 @@ img {
 }
 
 /*===== CLASS CSS ===== */
+.projects_name {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+.projects_desciption {
+  text-align: justify;
+  padding-bottom: 25px;
+}
+
+
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
